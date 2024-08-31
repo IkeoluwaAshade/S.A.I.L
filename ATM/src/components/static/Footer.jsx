@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import Button from '../reusables/Button'
 import { Link } from 'react-router-dom'
 
-const Footer = () => {
+const Footer = ({ firstButton, secondButton }) => {
   return (
     <Container>
         <Wrapper>
             <ButtonHold>
                 <ButtonDiv>
-                    <StyledLink to='/newUser'><Button ButtonText='New User'/></StyledLink>
-                    <StyledLink to='/existingUser'><Button ButtonText='Existing User'/></StyledLink>
+                    <StyledLink to='/newUser'><Button ButtonText={firstButton || 'New User'} /></StyledLink>
+                    <StyledLink to='/existingUser'><Button ButtonText={secondButton || 'Existing User'} /></StyledLink>
                 </ButtonDiv>
             </ButtonHold>
 

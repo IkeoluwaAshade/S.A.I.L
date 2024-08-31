@@ -195,6 +195,7 @@ const LandingPage = () => {
     <Container>
         <Wrapper>
             <HeroSection />  
+            <Footer />
         </Wrapper>
     </Container>
   )

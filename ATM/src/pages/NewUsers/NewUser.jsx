@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Footer from '../../components/static/Footer'
 
 
 const NewUser = () => {
@@ -13,6 +14,8 @@ const NewUser = () => {
 
             <ErrorMsg>Please Enter Numbers only</ErrorMsg>
           {/* </CTA> */}
+          <Footer 
+            firstButton='Home' secondButton='Enter' />
         </Wrapper>
     </Container>
   )

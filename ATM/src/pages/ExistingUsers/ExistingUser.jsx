@@ -1,13 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import Footer from '../../components/static/Footer'
 
 const ExistingUser = () => {
   return (
     <Container>
         <Wrapper>
-            <WelcomeMsg>Welcome back! Please ENTER your 4-digit PIN to continue</WelcomeMsg>
+            {/* <CTA> */}
+              <WelcomeMsg>Welcome back! Please ENTER your 4-digit PIN to continue</WelcomeMsg>
             
-            <input type="number" placeholder='PIN' />
+              <input type="number" placeholder='PIN' />
+            {/* </CTA> */}
+
+            <Footer firstButton='Home' secondButton='Enter' />
         </Wrapper>
     </Container>
   )
@@ -24,7 +29,10 @@ const Container = styled.div`
 `
 
 const Wrapper = styled.div`
-  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50%;
 
   input {
@@ -39,6 +47,8 @@ const Wrapper = styled.div`
     border: 5px solid ${(props => props.theme.color)};
   }
 `
+
+// const CTA = styled.div``
 
 const WelcomeMsg = styled.p`
   font-size: 3rem;
