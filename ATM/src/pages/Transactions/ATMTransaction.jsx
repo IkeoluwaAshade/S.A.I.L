@@ -64,21 +64,131 @@
 // export default ATM;
 
 
+
 import React from 'react'
 import styled from 'styled-components'
+import Footer from '../../components/static/Footer'
+import Button from '../../components/reusables/Button'
 
-const ATM = () => {
+const ATMTransaction = ({quickTransfer, cashWithdrawal, quickTeller, checkBalance, cashDeposit, changePassword}) => {
   return (
     <Container>
-        <Wrapper>
-            
-        </Wrapper>
+      <Wrapper>
+        <TransactionBox>
+          <Display>
+            <h3>Choose a Transaction to continue</h3>
+            <p>press Exit All to end all transaction</p>
+          </Display>
+
+          <ButtonContainer><Left>
+            <QuickTransfer><Button ButtonText='Quick Transfer' />
+            </QuickTransfer>
+
+            <CashWithdrawal><Button ButtonText='Cash Withdrawal' />
+            </CashWithdrawal>
+
+            <QuickTeller><Button ButtonText='Quick Teller' />
+            </QuickTeller>
+          </Left>
+
+          <Right>
+            <CheckBalance><Button ButtonText='Check Balance' />
+            </CheckBalance>
+
+            <CashDeposit><Button ButtonText='cash Deposit' />
+            </CashDeposit>
+
+            <ChangePassword><Button ButtonText='Change Password' />
+            </ChangePassword>
+          </Right></ButtonContainer>
+        </TransactionBox>
+
+        <Footer 
+          firstButton='Home'
+          secondButton='Exit All' 
+        />
+      </Wrapper>
+      
     </Container>
   )
 }
 
-export default ATM
+export default ATMTransaction
 
 const Container = styled.div``
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+ display: flex;
+ justify-content: center;
+ align-items: center;
+`
+
+const TransactionBox = styled.div`
+  background: ${(props) => props.theme.background};
+  color: ${(props) => props.theme.color};
+  width: 35%;
+  height: 300px;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const Display = styled.div`
+  /* background-color: green; */
+  text-align: center;
+  line-height: 0.5;
+  margin-bottom: 12px;
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+`
+
+const ButtonContainer = styled.div`
+  /* background-color: green; */
+  height: 200px;
+  width: 450px;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: space-between;
+`
+
+const Left = styled.div`
+  /* background-color: red; */
+  margin: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const QuickTransfer = styled.div``
+
+const CashWithdrawal = styled.div``
+
+const QuickTeller = styled.div``
+
+const Right = styled.div`
+  margin: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const CheckBalance = styled.div``
+
+const CashDeposit = styled.div``
+
+const ChangePassword = styled.div``
+
+
+

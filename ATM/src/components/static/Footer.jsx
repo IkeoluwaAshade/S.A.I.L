@@ -11,6 +11,7 @@ const Footer = ({ firstButton, secondButton }) => {
                 <ButtonDiv>
                     <StyledLink to='/newUser'><Button ButtonText={firstButton || 'New User'} /></StyledLink>
                     <StyledLink to='/existingUser'><Button ButtonText={secondButton || 'Existing User'} /></StyledLink>
+                    <StyledLink to='/transaction'><Button ButtonText={secondButton || 'Existing User'} /></StyledLink>
                 </ButtonDiv>
             </ButtonHold>
 
