@@ -65,130 +65,153 @@
 
 
 
-import React from 'react'
-import styled from 'styled-components'
-import Footer from '../../components/static/Footer'
-import Button from '../../components/reusables/Button'
+// import React from 'react'
+// import styled from 'styled-components'
+// import Footer from '../../components/static/Footer'
+// import Button from '../../components/reusables/Button'
 
-const ATMTransaction = ({quickTransfer, cashWithdrawal, quickTeller, checkBalance, cashDeposit, changePassword}) => {
-  return (
-    <Container>
-      <Wrapper>
-        <TransactionBox>
-          <Display>
-            <h3>Choose a Transaction to continue</h3>
-            <p>press Exit All to end all transaction</p>
-          </Display>
+// const ATMTransaction = ({quickTransfer, cashWithdrawal, quickTeller, checkBalance, cashDeposit, changePassword}) => {
+//   return (
+//     <Container>
+//       <Wrapper>
+//         <TransactionBox>
+//           <Display>
+//             <h3>Choose a Transaction to continue</h3>
+//             <p>press Exit All to end all transaction</p>
+//           </Display>
 
-          <ButtonContainer><Left>
-            <QuickTransfer><Button ButtonText='Quick Transfer' />
-            </QuickTransfer>
+//           <ButtonContainer><Left>
+//             <QuickTransfer><Button ButtonText='Quick Transfer' />
+//             </QuickTransfer>
 
-            <CashWithdrawal><Button ButtonText='Cash Withdrawal' />
-            </CashWithdrawal>
+//             <CashWithdrawal><Button ButtonText='Cash Withdrawal' />
+//             </CashWithdrawal>
 
-            <QuickTeller><Button ButtonText='Quick Teller' />
-            </QuickTeller>
-          </Left>
+//             <QuickTeller><Button ButtonText='Quick Teller' />
+//             </QuickTeller>
+//           </Left>
 
-          <Right>
-            <CheckBalance><Button ButtonText='Check Balance' />
-            </CheckBalance>
+//           <Right>
+//             <CheckBalance><Button ButtonText='Check Balance' />
+//             </CheckBalance>
 
-            <CashDeposit><Button ButtonText='cash Deposit' />
-            </CashDeposit>
+//             <CashDeposit><Button ButtonText='cash Deposit' />
+//             </CashDeposit>
 
-            <ChangePassword><Button ButtonText='Change Password' />
-            </ChangePassword>
-          </Right></ButtonContainer>
-        </TransactionBox>
+//             <ChangePassword><Button ButtonText='Change Password' />
+//             </ChangePassword>
+//           </Right></ButtonContainer>
+//         </TransactionBox>
 
-        <Footer 
-          firstButton='Home'
-          secondButton='Exit All' 
-        />
-      </Wrapper>
+//         <Footer 
+//           firstButton='Home'
+//           secondButton='Exit All' 
+//         />
+//       </Wrapper>
       
-    </Container>
-  )
-}
+//     </Container>
+//   )
+// }
 
-export default ATMTransaction
+// export default ATMTransaction
 
-const Container = styled.div``
+// const Container = styled.div``
 
-const Wrapper = styled.div`
- display: flex;
- justify-content: center;
- align-items: center;
-`
+// const Wrapper = styled.div`
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+// `
 
-const TransactionBox = styled.div`
-  background: ${(props) => props.theme.background};
-  color: ${(props) => props.theme.color};
-  width: 35%;
-  height: 300px;
-  border-radius: 7px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
+// const TransactionBox = styled.div`
+//   background: ${(props) => props.theme.background};
+//   color: ${(props) => props.theme.color};
+//   width: 35%;
+//   height: 300px;
+//   border-radius: 7px;
+//   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// `
 
-const Display = styled.div`
-  /* background-color: green; */
-  text-align: center;
-  line-height: 0.5;
-  margin-bottom: 12px;
+// const Display = styled.div`
+//   /* background-color: green; */
+//   text-align: center;
+//   line-height: 0.5;
+//   margin-bottom: 12px;
 
-  h3 {
-    font-size: 1.5rem;
-  }
+//   h3 {
+//     font-size: 1.5rem;
+//   }
 
-  p {
-    font-size: 0.7rem;
-  }
-`
+//   p {
+//     font-size: 0.7rem;
+//   }
+// `
 
-const ButtonContainer = styled.div`
-  /* background-color: green; */
-  height: 200px;
-  width: 450px;
-  border-radius: 5px;
+// const ButtonContainer = styled.div`
+//   /* background-color: green; */
+//   height: 200px;
+//   width: 450px;
+//   border-radius: 5px;
 
-  display: flex;
-  justify-content: space-between;
-`
+//   display: flex;
+//   justify-content: space-between;
+// `
 
-const Left = styled.div`
-  /* background-color: red; */
-  margin: 7px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-`
+// const Left = styled.div`
+//   /* background-color: red; */
+//   margin: 7px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+// `
 
-const QuickTransfer = styled.div``
+// const QuickTransfer = styled.div``
 
-const CashWithdrawal = styled.div``
+// const CashWithdrawal = styled.div``
 
-const QuickTeller = styled.div``
+// const QuickTeller = styled.div``
 
-const Right = styled.div`
-  margin: 7px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-`
+// const Right = styled.div`
+//   margin: 7px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+// `
 
-const CheckBalance = styled.div``
+// const CheckBalance = styled.div``
 
-const CashDeposit = styled.div``
+// const CashDeposit = styled.div``
 
-const ChangePassword = styled.div``
+// const ChangePassword = styled.div``
 
 
 
+
+
+
+
+
+
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+
+const ATMTransaction = () => {
+  const location = useLocation();
+  const { name, pin } = location.state || {};
+
+  return (
+    <div>
+      <h1>Welcome to your ATM transaction page, {name || 'User'}!</h1>
+      <p>Your session PIN: {pin}</p>
+      {/* Implement transaction functionalities here */}
+    </div>
+  );
+};
+
+export default ATMTransaction;

@@ -184,24 +184,91 @@
 //     }
 // `
 
-import React from 'react'
-import styled from 'styled-components'
-import Header from '../../components/static/Header'
-import Footer from '../../components/static/Footer'
-import HeroSection from './HeroSection'
+
+
+
+// import React from 'react'
+// import styled from 'styled-components'
+// import Header from '../../components/static/Header'
+// import Footer from '../../components/static/Footer'
+// import HeroSection from './HeroSection'
+
+// const LandingPage = () => {
+//   return (
+//     <Container>
+//         <Wrapper>
+//             <HeroSection />  
+//             <Footer />
+//         </Wrapper>
+//     </Container>
+//   )
+// }
+
+// export default LandingPage
+
+// const Container = styled.div``
+// const Wrapper = styled.div``
+
+
+
+
+
+
+
+
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+import HeroSection from '../LandingPage/HeroSection'
+import Footer from '../../components/static/Footer';
 
 const LandingPage = () => {
+  const [name, setName] = useState('');
+  const navigate = useNavigate();
+
+  const handleNewUserClick = () => {
+    if (name) {
+      navigate('/newUser', { state: { name } });
+    } else {
+      alert('Please enter your name!');
+    }
+  };
+
+  const handleExistingUserClick = () => {
+    navigate('/existingUser');
+  };
+
   return (
     <Container>
-        <Wrapper>
-            <HeroSection />  
-            <Footer />
-        </Wrapper>
+      <Wrapper>
+        <HeroSectionDiv>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </HeroSectionDiv>
+        <Footer
+          firstButton="New User"
+          secondButton="Existing User"
+          onFirstButtonClick={handleNewUserClick}
+          onSecondButtonClick={handleExistingUserClick}
+        />
+      </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;
 
-const Container = styled.div``
-const Wrapper = styled.div``
+const Container = styled.div``;
+const Wrapper = styled.div``;
+const HeroSectionDiv = styled.div``;
+
+
+
+
+
+
+
